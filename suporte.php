@@ -40,7 +40,10 @@ if (isset($_POST['acao'])) {
     <title>Cadastro</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap');
-
+        @import url('https://fonts.googleapis.com/css2?family=Alkalami&family=Montserrat:wght@200&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
         body {
             margin: 0;
             font-family: 'Noto Sans', sans-serif;
@@ -49,6 +52,96 @@ if (isset($_POST['acao'])) {
         body * {
             box-sizing: border-box;
         }
+
+        :root {
+      --purple: #9400d3;
+      --blue: #00285f;
+      --gray: #ededed;
+    }
+        
+        header {
+      width: 100%;
+      height: 140px;
+      background: var(--blue);
+    }
+
+    .content {
+      max-width: 1000px;
+      min-width: 300px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      font-size: 15px;
+      font-family: 'Lato', sans-serif;
+    }
+
+    nav {
+      width: 100%;
+      height: 125px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      font-size: 35px;
+      color: white;
+      cursor: pointer;
+      font-family: 'Lato', sans-serif;
+    }
+
+    .brand strong {
+      font-size: 35px;
+      color: var(--purple);
+      cursor: pointer;
+      font-family: 'Lato', sans-serif;
+    }
+
+    nav ul {
+      display: flex;
+      flex-direction: row;
+      margin-top: 10px;
+      margin-left: 90px;
+    }
+
+    nav ul li {
+      list-style: none;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-family: 'Play', sans-serif;
+    }
+
+    nav ul li a:hover {
+      color: #9400d3;
+    }
+
+    nav ul button {
+      border: 2px solid var(--purple);
+      background: var(--purple);
+      padding: 8px 25px;
+      cursor: pointer;
+      margin-left: 30px;
+      color: white;
+      font-weight: bold;
+      border-radius: 4px;
+      font-family: 'Orbitron', sans-serif;
+      letter-spacing: 2px;
+    }
+
+
+    nav ul button:hover {
+      transition: background, color 0.6s;
+      background: transparent;
+      color: var(--purple);
+    }
+
 
         .main-login {
             width: 100vw;
@@ -148,6 +241,7 @@ if (isset($_POST['acao'])) {
             background: #4907A6;
             cursor: pointer;
         }
+        
 
         @media only screen and (max-width: 950px) {
             .card-login {
@@ -190,6 +284,26 @@ if (isset($_POST['acao'])) {
 </head>
 
 <body>
+<header>
+    <div class="content">
+      <nav>
+        <a href="index.html" style="text-decoration: none; color: wihte;"><a href="index.html" class="brand" style="text-decoration: none; color: white;">Tech</a><a href="index.html" style="font-size: 35px;
+          color: var(--purple);
+          cursor: pointer;
+          font-family: 'Lato', sans-serif;
+          text-decoration: none;">Box</a>
+        </a>
+        <ul>
+          <li><a href="#catalog">PRODUTOS</a></li>
+          <li><a href="#about">SOBRE</a></li>
+          <li><a href="devsProject.html">DESENVOLVEDORES</a></li>
+          <a href="login.php"><button>LOGIN</button></a>
+          <a href="cadastroUsuario.php"><button>CADASTRAR</button></a>
+          <a href="suporte.php"><button>SUPORTE</button></a>
+        </ul>
+        </p>
+      </nav>
+    </header>
     <form action="" method="POST">
         <div class="form-group">
             <div class="main-login">
@@ -199,36 +313,6 @@ if (isset($_POST['acao'])) {
                         <br>
                         <br>
                         <br>
-                        <center>
-                        <form>
-                            <fieldset disabled>
-                                <legend><b>Envie seu problema</b></legend>
-                                <div class="mb-3">
-                                    <label for="disabledTextInput" class="form-label">o que está de errado?</label>
-                                    <input type="text" id="disabledTextInput" class="form-control" placeholder="">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="disabledSelect" class="form-label">Problemas que são comuns</label>
-                                    <select id="disabledSelect" class="form-select">
-                                        <option>wifi está debilitado</option>
-                                        <option>problema de rede no servidor</option>
-                                    </select>
-                                </div>
-                                <div class="mb-3">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck">
-                                        <label class="form-check-label" for="disabledFieldsetCheck">
-                                            Este formulário te ajudou?
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="d-grid gap-2 col-6 mx-auto">
-                                    <button id="botão_suporte_enviar" class="botão_enviar" type="button">Enviar</button>
-                                    <button id="botão_suporte_cancelar" class="botão_cancelar" type="button">Cancelar</button>
-                                </div>
-                            </fieldset>
-                        </form>
-                        </center>
                     </div>
                 </div>
                 <div class="right-login">

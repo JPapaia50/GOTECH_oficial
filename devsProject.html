@@ -102,10 +102,11 @@ nav {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+
 }
 
 .brand {
+    
     font-size: 35px;
     color: white;
     cursor: pointer; 
@@ -121,19 +122,22 @@ nav {
 
 nav ul {
     display: flex;
-    flex-direction: row;
+      flex-direction: row;
+      margin-top: 10px;
+      margin-left: 440px;
 }
 
 nav ul li {
     list-style: none;
-    padding: 10px;
-    cursor: pointer;
+      padding: 10px;
+      cursor: pointer;
 }
 
 nav ul li a {
-      color: white;
+    color: white;
       text-decoration: none;
       font-family: 'Play', sans-serif;
+      margin-left: 245px;
 }
 
 nav ul li a:hover {
@@ -144,8 +148,8 @@ nav ul button {
     border: 2px solid var(--purple);
       background: var(--purple);
       padding: 8px 25px;
-      cursor: pointer;
       margin-left: 30px;
+      cursor: pointer;
       color: white;
       font-weight: bold;
       border-radius: 4px;
@@ -165,11 +169,11 @@ nav ul button:hover {
     <header>
         <div class="content">
             <nav>
-                <a href="index.html" style="text-decoration: none;"><p class="brand">Tech<strong>Box</strong></a>
+                <a href="index.html" style="text-decoration: none; color: wihte;"><a href="index.html" class="brand" style="text-decoration: none; color: white;">Tech<a href="index.html" style="font-size: 35px; color: var(--purple); cursor: pointer; font-family: 'Lato', sans-serif; text-decoration: none;">Box</a></a>
                 <ul>
-                    <li><a href="index.html">Pagina Inicial</a></li>
-                    <a href="login.php"><button>Login</button></a>
-                    <a href="cadastroUsuario.php"><button>Cadastre-se</button></a>
+                    <a href="login.php"><button>LOGIN</button></a>
+                    <a href="cadastroUsuario.php"><button>CADASTRO</button></a>
+                    <a href="suporte.php"><button>SUPORTE</button></a>
                 </ul>
                 </p>
             </nav>
